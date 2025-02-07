@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pet Diary</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>Welcome to your Pet Diary!</h1>
+        <img src="{{ url_for('static', filename='home_image.jpg') }}" alt="Home Image" width="300"><br>
+        <a href="{{ url_for('diary') }}">日記を見る</a><br>
+        <a href="{{ url_for('register') }}">新規登録</a><br>
+    </div>
+</body>
+</html>

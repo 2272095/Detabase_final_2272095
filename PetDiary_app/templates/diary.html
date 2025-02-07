@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pet Diary</title>
+</head>
+<body>
+    <h1>Pet Diary</h1>
+    <a href="/add">Add New Entry</a>
+    <ul>
+        {% for entry in entries %}
+            <li>
+                Date: {{ entry.date }}<br>
+                Content: {{ entry.content }}<br>
+                {% if entry.image_filename %}
+                    <img src="{{ url_for('static', filename='uploads/' + entry.image_filename) }}" alt="Diary Image" width="200">
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Home</a>
+    <a href="/logout">Logout</a>
+</body>
+</html>
